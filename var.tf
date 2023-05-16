@@ -18,13 +18,19 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "key_name" {
-  description = "The key name of the Key Pair"
+variable "keypair_name" {
+  description = "The name of the keypair"
   type        = string
 }
 
 variable "security_group_id" {
   description = "The ID of the Security Group"
   type        = string
+}
+
+variable "python_program_path" {
+  description = "The path to the Python program to be uploaded"
+  type        = string
+  default     = "./scripts/program.py"
 }
 
