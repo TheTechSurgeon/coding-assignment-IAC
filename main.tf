@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.aws_region
 }
 
 resource "aws_instance" "test"{
@@ -16,5 +16,5 @@ resource "aws_instance" "test"{
     instance_type = var.instance_type
     subnet_id = var.subnet_id
     key_name = var.key_name
-    vpc_security_group_ids = [var.se]
+    vpc_security_group_ids = [var.security_group_id]
 } 
