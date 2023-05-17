@@ -34,3 +34,8 @@ variable "python_program_path" {
   default     = "./scripts/program.py"
 }
 
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
+  type        = string
+}
+
